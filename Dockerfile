@@ -48,7 +48,8 @@ ENV QLC_DEPENDS="\
                 libqt5network5 \
                 libqt5script5 \
                 libqt5widgets5 \
-                libusb-0.1-4"
+                libusb-0.1-4 \
+                libxcb-cursor0"
 
 # XVFB is used to fake an X server for testing and headless mode.
 RUN apt-get update \
