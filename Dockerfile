@@ -2,7 +2,7 @@
 ARG QLC_URL=https://www.qlcplus.org/downloads/4.13.1/qlcplus_4.13.1_amd64.deb
 
 # Pull base image.
-FROM accetto/debian-vnc-xfce-g3
+FROM consol/debian-xfce-vnc
 
 # Define working directory.
 WORKDIR /tmp
@@ -10,6 +10,8 @@ WORKDIR /tmp
 ARG QLC_URL
 
 ADD $QLC_URL /tmp/qlcplus.deb
+
+USER root
 
 RUN apt-get update
 
