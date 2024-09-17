@@ -11,13 +11,13 @@ ARG QLC_URL
 
 ADD $QLC_URL /tmp/qlcplus.deb
 
-RUN apt-get update
+RUN sudo apt-get update
 
-RUN apt-get dist-upgrade -y
+RUN sudo apt-get dist-upgrade -y
 
 # Install dependencies.
 RUN \
-  apt-get -y install \
+  sudo apt-get -y install \
     libasound2 \
     libfftw3-double3 \
     libftdi1-2 \
@@ -31,8 +31,8 @@ RUN \
     libqt5serialport5 \
     libusb-1.0-0 
 
-RUN apt-get clean
+RUN sudo apt-get clean
 
-RUN dpkg -i /tmp/qlcplus.deb
+RUN sudo dpkg -i /tmp/qlcplus.deb
 
 COPY rootfs/ /
