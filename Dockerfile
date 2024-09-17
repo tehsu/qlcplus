@@ -2,7 +2,7 @@
 ARG QLC_URL=https://www.qlcplus.org/downloads/4.13.1/qlcplus_4.13.1_amd64.deb
 
 # Pull base image.
-FROM debian@sha256:382967fd7c35a0899ca3146b0b73d0791478fba2f71020c7aa8c27e3a4f26672
+FROM jlesage/baseimage-gui:debian-12-v4.6
 
 # Define working directory.
 WORKDIR /tmp
