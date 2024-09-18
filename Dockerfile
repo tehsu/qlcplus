@@ -35,4 +35,7 @@ RUN apt-get clean
 
 RUN dpkg -i /tmp/qlcplus.deb
 
+RUN groupadd -g 986 usb
+RUN gpasswd -a app usb
+
 COPY rootfs/ /
