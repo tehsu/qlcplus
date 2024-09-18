@@ -2,7 +2,7 @@
 ARG QLC_URL=https://www.qlcplus.org/downloads/4.13.1/qlcplus_4.13.1_amd64.deb
 
 # Pull base image.
-FROM consol/debian-xfce-vnc
+FROM jlesage/baseimage-gui:ubuntu-22.04-v4
 
 # Define working directory.
 WORKDIR /tmp
@@ -10,8 +10,6 @@ WORKDIR /tmp
 ARG QLC_URL
 
 ADD $QLC_URL /tmp/qlcplus.deb
-
-USER root
 
 RUN apt-get update
 
